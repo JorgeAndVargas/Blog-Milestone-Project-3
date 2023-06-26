@@ -74,6 +74,8 @@ router.post('/admin', async (req, res) => {
 
 //GET 
 //ADMIN DASHBOARD
+//ADDED MIDDLEWARE SO NOT EVERYONE HAS ACCESS TO A DASHBOARD
+//DASHBOARD IS PASSWORD PROTECTED
 
 router.get('/dashboard', authMiddleware, async (req, res) => {
   try {
