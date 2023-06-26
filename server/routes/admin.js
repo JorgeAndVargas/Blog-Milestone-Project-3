@@ -221,6 +221,15 @@ router.post('/register', async (req, res) => {
   }
 });
 
+//GET
+//ADMIN LOGOUT
+router.get('/logout', (req, res) => {
+  res.clearCookie('token');
+  //res.json({ message: 'Logout successful.'});
+  res.redirect('/');
+});
+
+
 
 
 module.exports = router;  
