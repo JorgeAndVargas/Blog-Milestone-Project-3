@@ -185,6 +185,19 @@ router.put('/edit-post/:id', authMiddleware, async (req, res) => {
 
 });
 
+//DELETE
+//ADMIN DELETE A POST
+router.delete('/delete-post/:id', authMiddleware, async (req, res) => {
+
+  try {
+    await Post.deleteOne( { _id: req.params.id } );
+    res.redirect('/dashboard');
+  } catch (error) {
+    console.log(error);
+  }
+
+});
+
 //POST
 //ADMIN REGISTER
 
