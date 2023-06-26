@@ -119,6 +119,28 @@ router.get('/add-post', authMiddleware, async (req, res) => {
 });
 
 //POST
+//ADMIN CREATE A POST
+router.post('/add-post', authMiddleware, async (req, res) => {
+  try {
+    try {
+      const newPost = new Post({
+        title: req.body.title,
+        image: req.body.image,
+        body: req.body.body
+      });
+
+      await Post.create(newPost);
+      res.redirect('/dashboard');
+    } catch (error) {
+      console.log(error);
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//POST
 //ADMIN REGISTER
 
 router.post('/register', async (req, res) => {
