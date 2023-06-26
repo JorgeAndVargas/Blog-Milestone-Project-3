@@ -362,3 +362,14 @@ img {
   object-fit: cover;
 }
 
+.admin-image {
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  display: block;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+
+}
+
