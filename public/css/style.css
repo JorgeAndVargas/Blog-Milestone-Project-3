@@ -336,3 +336,22 @@ img {
   justify-content: space-between;
   padding: 10px 0;
 }
+
+.post-image {
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  display: block;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.posts-list-date {
+  color: gray;
+  font-size: 12px;
+}
+
+.post-title {
+  font-weight: bold;
+}

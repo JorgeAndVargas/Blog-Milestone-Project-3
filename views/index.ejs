@@ -8,11 +8,19 @@
 <section class="posts">
     <h2 class="posts-heading"> Latests Posts </h2>
     <ul class="posts-ul">
-        <li>
-            <a href="#">
-                <span>Post Title</span>
-                <span class="posts-list-date">Date</span>
-        </li>
+
+        <% data.forEach(post => { %>
+
+
+            <li>
+                <a href="#">
+                    <img src= <%= post.image %> alt="image description" class="post-image"></img>
+                    <span class="post-title"><%= post.title %></span>
+                    <span class="posts-list-date"><%= post.createdAt.toDateString() %></span>
+            </li>
+
+
+        <% }) %>
     </ul>
 
     <a href="#" class="pagination">&lt; View Older Posts</a>
