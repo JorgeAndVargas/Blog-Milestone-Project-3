@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const PostSchema = new Sechma ({
+const PostSchema = new Schema ({
     title: {
         type: String,
         required: true
@@ -24,4 +24,4 @@ const PostSchema = new Sechma ({
     },
 });
 
-module.export = mongoose.model('Post', PostSchema)
+module.exports = mongoose.model('Post', PostSchema)
