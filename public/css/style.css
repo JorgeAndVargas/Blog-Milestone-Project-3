@@ -9,7 +9,7 @@
   --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
   --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
   --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-  --border-radius: 10px;
+  --border-radius: 30px;
 }
 
 body {
@@ -48,6 +48,7 @@ textarea {
   text-decoration: none;
   margin: 4px 2px; 
   cursor: pointer;
+  border-radius: var(--border-radius);
 }
 
 .btn-delete {
@@ -75,7 +76,7 @@ img {
 /* Hero Section */
 .hero-image {
   max-height: 528px;
-  filter: drop-shadow(0px 44px 34px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 44px 34px rgba(0, 0, 0, 0.05));
   overflow: hidden;
   border-radius: var(--border-radius);
 }
@@ -170,26 +171,33 @@ img {
 
 /* Author - HomePage */
 .author {
-  padding: 10px 0;
+  padding: 60px 60px 60px 60px;
   text-align: left;
+  color: white;
+  background: #228bfe;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0px 44px 34px rgba(0, 0, 0, 0.05));
 }
 
 .author-heading {
-  margin-top: 10px;
+  padding-top: 60px;
   margin-bottom: 5px;
   font-weight: 700;
+
 }
 
 .author-body {
   font-size: var(--font-size-md);
   margin: 5px 0 40px 0;
+  padding-bottom: 60px;
 }
 
 
 /* Home Article List */
 .posts-heading {
   margin-top: 4rem;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .posts-ul {
@@ -205,7 +213,7 @@ img {
   font-size: 1rem;
   color: var(--gray);
   width: 100px;
-  display: inline-block;
+  display:inline-block;
   width: 260px;
 }
 
@@ -373,3 +381,8 @@ img {
 
 }
 
+/* .posts {
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  border-radius: 30px;
+} */
