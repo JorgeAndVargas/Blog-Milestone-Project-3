@@ -257,8 +257,8 @@ img {
 
 /* SeachBar */
 .searchBar {
-  visibility: hidden;
-  transform: translateY(-100px);
+  /* visibility: hidden;
+  transform: translateY(-100px); */
   background-color: var(--black);
   padding: 4px 0;
   position: absolute;
@@ -355,3 +355,10 @@ img {
 .post-title {
   font-weight: bold;
 }
+
+.post-image-inpost {
+  border-radius: var(--border-radius);
+  width: 100%;
+  object-fit: cover;
+}
+

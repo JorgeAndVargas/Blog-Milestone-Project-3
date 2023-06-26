@@ -50,7 +50,55 @@ router.get('', async (req, res) => {
 //     }
 // });
 
- 
+ //GET ROUTE BY ID
+
+ router.get('/post/:id', async (req, res) => {
+    try {
+
+        let slug = req.params.id;
+
+      const data = await Post.findById({ _id: slug });
+
+      const locals = {
+        title: data.title,
+        description: "This is my blog."
+    }
+
+      res.render('post', { locals, data });
+    } catch (error) { //error if there's an error on finding posts
+      console.log(error);
+    }
+});
+
+ //POST ROUTE FOR SEARCH
+
+ router.post('/search', async (req, res) => {
+    try {
+        const locals = {
+            title: "Search",
+            description: "This is my blog."
+        }
+        
+        let searchTerm = req.body.searchTerm;
+        const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "")
+        const data = await Post.find({
+            $or: [
+                {title: { $regex: new RegExp(searchNoSpecialChar, 'i')}},
+                {body: { $regex: new RegExp(searchNoSpecialChar, 'i')}},
+
+
+            ]
+        });
+
+
+      res.render("search", {
+        data,
+        locals
+      });
+    } catch (error) { //error if there's an error on finding posts
+      console.log(error);
+    }
+});
 
 
 
