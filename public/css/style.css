@@ -64,7 +64,7 @@ img {
 
 /* Layout */
 .container {
-  max-width: 982px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -75,7 +75,7 @@ img {
 
 /* Hero Section */
 .hero-image {
-  max-height: 528px;
+  max-height: auto;
   filter: drop-shadow(0px 44px 34px rgba(0, 0, 0, 0.05));
   overflow: hidden;
   border-radius: var(--border-radius);
@@ -223,6 +223,9 @@ img {
   justify-content: space-between;
   text-decoration: none;
   margin: 18px 0;
+  background-color: white;
+  padding: 30px 30px 30px 30px;
+  border-radius: 30px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -259,9 +262,7 @@ img {
 }
 
 
-.posts {
-  white-space: pre-wrap;
-}
+
 
 /* SeachBar */
 .searchBar {
